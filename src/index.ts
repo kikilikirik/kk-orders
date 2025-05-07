@@ -31,11 +31,6 @@ function setup() {
 function draw (){
     p.image(tischimage, 0, 0, innerWidth - 20, innerHeight - 20);
     
-    for (let i = 0; i < rectarray.length; i++) {
-        for (let j = 0; j < rectarray[i].length; j++) {
-            
-        }
-    }
 }
 function mouseclicked() {
    
