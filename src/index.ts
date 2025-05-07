@@ -8,18 +8,37 @@ fertige bestellung(2)= grün
 4:
 */ 
 import p5 from "p5";
-let tischimage = p5.Image;
-let 
+let tischimage : p5.Image;
+let rectarray : number[][] = [];
+
 
 const p = new p5((sketch) => {
     sketch.setup = setup;
-    sketch.prelaod = prelaod;
-});
-function prelaod (){
-
+    sketch.preload = preload;
+    sketch.draw = draw;
+    sketch.mouseclicked = mouseclicked;
+})
+function preload (){
+   tischimage= p.loadImage('assets/tische-anordnung.png')
+   rectarray = p.loadJSON('test.json') as number[][];
 }
 
 function setup() {
-    p.createCanvas(400, 400);
-    p.background("red");
+    p.createCanvas(innerWidth, innerHeight);
+    mouseclicked()
+   
 }
+function draw (){
+    p.image(tischimage, 0, 0, innerWidth - 20, innerHeight - 20);
+    
+    for (let i = 0; i < rectarray.length; i++) {
+        for (let j = 0; j < rectarray[i].length; j++) {
+            
+        }
+    }
+}
+function mouseclicked() {
+   
+    
+   
+} 
